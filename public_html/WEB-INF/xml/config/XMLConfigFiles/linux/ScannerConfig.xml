@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+    <Scanner>
+     <ScanningDevice>0</ScanningDevice>
+     <ScannerModel></ScannerModel>
+     <DPI>100</DPI>
+     <Mode>Lineart</Mode>
+     <OutputFormat>pdf</OutputFormat>
+     <ColorEnable></ColorEnable>
+     <JobFolder>/home/jdev/Scan/Jobs</JobFolder>
+   </Scanner>
+</Configuration>
+

@@ -1,0 +1,422 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <value n="CachedConfigTable" v=""/>
+   <hash n="component-versions">
+      <value n="oracle.ide.model.Project" v="10.1.2.0.0"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.jdeveloper.model.PathsConfiguration/javaContentSet"/>
+      <string v="oracle.ide.model.ResourcePaths/resourcesContentSet"/>
+      <string v="oracle.jdeveloper.model.J2eeSettings/webContentSet"/>
+      <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
+      <string v="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings/offlineDBContentSet"/>
+   </list>
+   <value n="defaultPackage" v="sfu.actions.job.fax"/>
+   <hash n="oracle.adf.dt.settings.ADFMSettings">
+      <value n="metafilepackage" v="sfu.actions.job.fax"/>
+   </hash>
+   <hash n="oracle.adf.mds.dt.ui.ide.common.XMLPathData">
+      <list n="XMLPath"/>
+   </hash>
+   <hash n="oracle.adf.mds.dt.ui.util.DBData">
+      <value n="reposConnectionName" v=""/>
+      <value n="useRepository" v="false"/>
+   </hash>
+   <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
+      <hash n="modelersContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="model/"/>
+         </list>
+      </hash>
+      <value n="modelersVersion" v="10.12"/>
+   </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet"/>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
+      <value n="internalEncoding" v="UTF8"/>
+   </hash>
+   <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="dbsentrySFU-SFUProj-webapp"/>
+      <value n="j2eeWebContextRoot" v="dbsentrySFU-SFUProj-context-root"/>
+      <hash n="webContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="-WEB-INF/config"/>
+                  <string v="-WEB-INF/databases"/>
+                  <string v="-WEB-INF/lib"/>
+                  <string v="-WEB-INF/src"/>
+                  <string v="-config"/>
+                  <string v="-css"/>
+                  <string v="-temp"/>
+                  <string v="-temp_msg"/>
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/beans/"/>
+               <list n="pattern-filters">
+                  <string v="-WEB-INF/src/sfu/beans/configuration"/>
+                  <string v="-WEB-INF/src/sfu/beans/exception"/>
+                  <string v="-WEB-INF/src/sfu/beans/info"/>
+                  <string v="-WEB-INF/src/sfu/beans/job"/>
+                  <string v="-WEB-INF/src/sfu/beans/logger"/>
+                  <string v="-WEB-INF/src/sfu/beans/patch"/>
+                  <string v="-WEB-INF/src/sfu/beans/replicate"/>
+                  <string v="-WEB-INF/src/sfu/beans/scan"/>
+                  <string v="-WEB-INF/src/sfu/beans/scheduler"/>
+                  <string v="-WEB-INF/src/sfu/beans/uploadEngine"/>
+                  <string v="+WEB-INF/src/sfu/beans/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/listeners/"/>
+               <list n="pattern-filters">
+                  <string v="+WEB-INF/src/sfu/listeners/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/actions/"/>
+               <list n="pattern-filters">
+                  <string v="-WEB-INF/src/sfu/actions/logger"/>
+                  <string v="-WEB-INF/src/sfu/actions/patch"/>
+                  <string v="-WEB-INF/src/sfu/actions/scan"/>
+                  <string v="-WEB-INF/src/sfu/actions/upload"/>
+                  <string v="+WEB-INF/src/sfu/actions/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/actionforms/"/>
+               <list n="pattern-filters">
+                  <string v="-WEB-INF/src/sfu/actionforms/configuration"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/fax"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/job/mail"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/logger"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/patch"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/scan"/>
+                  <string v="-WEB-INF/src/sfu/actionforms/upload"/>
+                  <string v="+WEB-INF/src/sfu/actionforms/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/"/>
+               </list>
+            </hash>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="javaContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/beans/"/>
+               <list n="pattern-filters">
+                  <string v="-sfu/beans/configuration"/>
+                  <string v="-sfu/beans/exception"/>
+                  <string v="-sfu/beans/info"/>
+                  <string v="-sfu/beans/job"/>
+                  <string v="-sfu/beans/logger"/>
+                  <string v="-sfu/beans/patch"/>
+                  <string v="-sfu/beans/replicate"/>
+                  <string v="-sfu/beans/scan"/>
+                  <string v="-sfu/beans/scheduler"/>
+                  <string v="-sfu/beans/uploadEngine"/>
+                  <string v="+sfu/beans/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/listeners/"/>
+               <list n="pattern-filters">
+                  <string v="+sfu/listeners/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/actions/"/>
+               <list n="pattern-filters">
+                  <string v="-sfu/actions/logger"/>
+                  <string v="-sfu/actions/patch"/>
+                  <string v="-sfu/actions/scan"/>
+                  <string v="-sfu/actions/upload"/>
+                  <string v="+sfu/actions/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/actionforms/"/>
+               <list n="pattern-filters">
+                  <string v="-sfu/actionforms/configuration"/>
+                  <string v="-sfu/actionforms/fax"/>
+                  <string v="-sfu/actionforms/job/mail"/>
+                  <string v="-sfu/actionforms/logger"/>
+                  <string v="-sfu/actionforms/patch"/>
+                  <string v="-sfu/actionforms/scan"/>
+                  <string v="-sfu/actionforms/upload"/>
+                  <string v="+sfu/actionforms/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/databases/"/>
+               </list>
+            </hash>
+            <hash>
+               <url n="content-folder-url" path="public_html/WEB-INF/src/sfu/"/>
+               <list n="pattern-filters">
+                  <string v="+sfu/"/>
+               </list>
+               <list n="url-path">
+                  <url path="public_html/WEB-INF/src/"/>
+               </list>
+            </hash>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
+      <hash n="offlineDBContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="database/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="javaOptions" v="-Dderby.system.home=/home/jdev/dbsentrySFU/SFUProj/public_html/WEB-INF/databases"/>
+            <value n="name" v="Default"/>
+            <value n="programArguments" v=""/>
+            <url n="targetURL" path="public_html/login.jsp"/>
+            <value n="VMName" v="server"/>
+         </hash>
+      </hash>
+      <list n="runConfigurationList">
+         <string v="Default"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectLibraries">
+      <list n="exportedReferences">
+         <hash>
+            <value n="id" v="Additional Classpath"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+      <hash n="internalDefinitions">
+         <list n="jdkDefinitions"/>
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="sfuJars/activation.jar" jar-entry=""/>
+                  <url path="sfuJars/antlr.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-beanutils.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-collections.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-dbcp-1.1.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-digester.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-el-1.0.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-fileupload.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-lang.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-logging.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-pool-1.1.jar" jar-entry=""/>
+                  <url path="sfuJars/commons-validator.jar" jar-entry=""/>
+                  <url path="sfuJars/derby.jar" jar-entry=""/>
+                  <url path="sfuJars/derbytools.jar" jar-entry=""/>
+                  <url path="sfuJars/iText.jar" jar-entry=""/>
+                  <url path="sfuJars/jakarta-oro.jar" jar-entry=""/>
+                  <url path="sfuJars/jdbc2_0-stdext.jar" jar-entry=""/>
+                  <url path="sfuJars/jsp-el-api-1.0.jar" jar-entry=""/>
+                  <url path="sfuJars/jta.jar" jar-entry=""/>
+                  <url path="sfuJars/log4j-1.2.8.jar" jar-entry=""/>
+                  <url path="sfuJars/mail.jar" jar-entry=""/>
+                  <url path="sfuJars/quartz.jar" jar-entry=""/>
+                  <url path="sfuJars/regexp-1.2.jar" jar-entry=""/>
+                  <url path="sfuJars/servlet.jar" jar-entry=""/>
+                  <url path="sfuJars/share-1_1_18.jar" jar-entry=""/>
+                  <url path="sfuJars/struts-legacy.jar" jar-entry=""/>
+                  <url path="sfuJars/struts.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Additional Classpath"/>
+               <value n="id" v="Additional Classpath"/>
+            </hash>
+         </list>
+      </hash>
+      <hash n="jdkReference">
+         <url n="id" path="../../jdevhome/system/oracle.jdeveloper.10.1.3.34.12/1.4.2_05.jdk"/>
+         <value n="isJDK" v="true"/>
+         <value n="jdkVersion" v="1.4.2_05"/>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="Additional Classpath"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JSP Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Servlet Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../jdevhome/system/oracle.jdeveloper.10.1.3.34.12/sfuJars.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Struts Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../jdevhome/system/oracle.jdeveloper.10.1.3.34.12/FileSyncJars.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectPaths">
+      <url n="outputDirectory" path="public_html/WEB-INF/classes/"/>
+   </hash>
+   <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
+      <hash n="libraries">
+         <hash n="WEB-INF\struts-bean.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts Bean"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts Bean"/>
+            <value n="tldURL" v="WEB-INF/struts-bean.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-bean"/>
+            <value n="version" v="1.0"/>
+         </hash>
+         <hash n="WEB-INF\struts-html.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts HTML"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts HTML"/>
+            <value n="tldURL" v="WEB-INF/struts-html.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-html"/>
+            <value n="version" v="1.0"/>
+         </hash>
+         <hash n="WEB-INF\struts-logic.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts Logic"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts Logic"/>
+            <value n="tldURL" v="WEB-INF/struts-logic.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-logic"/>
+            <value n="version" v="1.0"/>
+         </hash>
+         <hash n="WEB-INF\struts-nested.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts Nested"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts Nested"/>
+            <value n="tldURL" v="WEB-INF/struts-nested.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-nested"/>
+            <value n="version" v="1.0"/>
+         </hash>
+         <hash n="WEB-INF\struts-template.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts Templates"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts Templates"/>
+            <value n="tldURL" v="WEB-INF/struts-template.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-template"/>
+            <value n="version" v="1.0"/>
+         </hash>
+         <hash n="WEB-INF\struts-tiles.tld">
+            <hash n="baseLibrary">
+               <value n="name" v="Struts Tiles"/>
+               <value n="version" v="1.0"/>
+            </hash>
+            <value n="jspVersion" v="1.1"/>
+            <value n="name" v="Struts Tiles"/>
+            <value n="tldURL" v="WEB-INF/struts-tiles.tld"/>
+            <value n="URI" v="http://jakarta.apache.org/struts/tags-tiles"/>
+            <value n="version" v="1.0"/>
+         </hash>
+      </hash>
+   </hash>
+   <list n="ownerMap"/>
+   <list n="recentlyUsedPackages">
+      <string v="sfu.actions.job.fax"/>
+      <string v="sfu.actionforms.job.fax"/>
+      <string v="sfu.actionforms.job"/>
+      <string v="sfu.beans.user"/>
+      <string v="sfu.actions.user"/>
+      <string v="sfu.actionforms.user"/>
+      <string v="sfu.actions.job.upload"/>
+      <string v="sfu.actions.job"/>
+      <string v="sfu.actions.configuration"/>
+      <string v="sfu.actions.login"/>
+      <string v="sfu.actions.auditTrail"/>
+      <string v="sfu.actionforms.auditTrail"/>
+      <string v="sfu.beans.auditTrail"/>
+      <string v="sfu.actionforms.login"/>
+      <string v="sfu.actionforms"/>
+      <string v="sfu.beans"/>
+      <string v="sfu.beans.database"/>
+      <string v="sfu.beans.misc"/>
+      <string v=""/>
+      <string v="sfu.actions.job.mail"/>
+      <string v="sfu"/>
+      <string v="mypackage1"/>
+   </list>
+   <value n="sfu.actions.job.upload.UploadActionBeanInfo" v="sfu.actions.configuration.RepositoryConfigurationAction"/>
+   <value n="useDynamicPaths" v="true"/>
+</jpr:project>

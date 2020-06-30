@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<configurations xmlns="http://xmlns.oracle.com/uix/config">
+  <application-configuration debug="false">
+    <default-expression-language>el</default-expression-language>
+  </application-configuration>
+
+  <default-configuration>
+    <look-and-feel>blaf</look-and-feel>
+    <!--<look-and-feel>minimal</look-and-feel>-->
+  </default-configuration>
+</configurations>

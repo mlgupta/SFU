@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+    <Repository>
+     <IPName></IPName>
+     <ConnectString></ConnectString>
+     <User>system</User>
+     <Password>system</Password>
+   </Repository>
+</Configuration>
+

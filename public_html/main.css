@@ -1,0 +1,156 @@
+body {
+	background-color: #00a8af;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.bgColor_D8EAEC {
+	background-color:#D8EAEC;
+}
+.bgColor_C5E2E5 {
+	background-color:#C5E2E5;
+}
+.bdrColor_336666 {
+	border:1px solid #336666;
+	font-size: 11px;
+}
+.bdrBottomColor_336666 {
+	border-bottom:1px solid #336666;
+}
+.bdrLeftColor_336666 {
+	border-left:1px solid #336666;
+}
+.bdrTopColor_336666 {
+	border-right:1px solid #336666;
+}
+.bdrRightColor_336666 {
+	border-Right:1px solid #336666;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.tr_C5E2E5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color:#C5E2E5;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight:bold;
+	background-color:#00A8AF;
+}
+.heading_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.buttons {
+	BORDER-RIGHT: #336666 1px solid; BORDER-TOP: #336666 1px solid;
+	BORDER-LEFT: #336666 1px solid; BORDER-BOTTOM: #336666 1px solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; color: #FFFFFF; 
+	BACKGROUND-IMAGE: url(images/butt_tile.gif); BACKGROUND-REPEAT: repeat-x;
+}
+.imgDtPickerOk {
+	background-image: url(images/butt_dtpicker_ok.gif); HEIGHT: 17px; MARGIN-LEFT: 3px; WIDTH: 16px;
+	background-repeat:no-repeat;	
+  cursor: pointer; 
+  cursor: hand;    
+}
+.imgDtPickerCancel {
+	background-image: url(images/butt_dtpicker_cancel.gif); HEIGHT: 17px; MARGIN-LEFT: 3px; WIDTH: 16px;
+	background-repeat:no-repeat;	
+  cursor: pointer; 
+  cursor: hand;  
+}
+.imgDtPickerCal {
+	background-image: url(images/butt_dtpicker_cal.gif); HEIGHT: 17px; MARGIN-LEFT: 3px; WIDTH: 15px;
+	background-repeat:no-repeat;	
+  cursor: pointer; 
+  cursor: hand;    
+}
+
+/* Following classes are for images in Navigation Bar ****************************************************************/
+.imgNavFirst{
+	background-image: url("images/nav_bar_1st.gif");
+  width:17px; height:17px;
+	float:left;
+  cursor: pointer; 
+  cursor: hand;    
+}
+.imgNavFirstDisable{
+	background-image: url("images/nav_bar_1st_disable.gif");
+  width:17px; height:17px;
+	float:left;
+}
+.imgNavPrev{
+	background-image: url("images/nav_bar_prev.gif");
+  width:17px; height:17px;
+	float:left;
+  cursor: pointer; 
+  cursor: hand;    
+}
+.imgNavPrevDisable{
+	background-image: url("images/nav_bar_prev_disable.gif");
+  width:17px; height:17px;
+	float:left;
+}
+.imgNavNext{
+	background-image: url("images/nav_bar_next.gif");
+  width:17px; height:17px;
+	float:left;
+  cursor: pointer; 
+  cursor: hand;    
+}
+.imgNavNextDisable{
+	background-image: url("images/nav_bar_next_disable.gif");
+  width:17px; height:17px;
+	float:left;
+}
+.imgNavLast{
+	background-image: url("images/nav_bar_last.gif");
+  width:17px; height:17px;
+	float:left;
+  cursor: pointer; 
+  cursor: hand;    
+}
+.imgNavLastDisable{
+	background-image: url("images/nav_bar_last_disable.gif");
+  width:17px; height:17px;
+	float:left;
+}
+
+.imgGo {
+	background-image: url("images/butt_go.gif");
+  width:20px; height:17px;
+	float:left;
+  margin-left:5px;
+  cursor: pointer; 
+  cursor: hand;
+}
+.imgTileTopbar {
+	background-image: url("images/tile_topbar.jpg");
+}
+
+.componentStyle
+{
+	font-size: 11px;
+}
+
+.componentStyleDisable{
+	background-image: url("images/disable_1px.gif");
+}
+
+/* Following classes are for other images  ****************************************************************/
+.imgStatusMsg{
+	background-image: url("images/message_blink.gif");
+  width:20px; height:15px;
+  margin-left:3px;
+}

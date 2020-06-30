@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="userForm">
+      <field property="txtUserId" depends="required,minlength,maxlength">
+        <arg0 key="lbl.UserId">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>4</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtUserName" depends="required,maxlength">
+        <arg0 key="lbl.UserName">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtEmailId" depends="required,email">
+        <arg0 key="tbl.EmailId">
+        </arg0>
+      </field>
+      <field property="txtPassword" depends="required,minlength,maxlength">
+        <arg0 key="lbl.Password">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>4</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtConfirmPassword" depends="required,minlength,maxlength">
+        <arg0 key="lbl.ConfirmPassword">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>4</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="mailForm">
+      <field property="txtTo" depends="required">
+        <arg0 key="lbl.To">
+        </arg0>
+      </field>
+    </form>
+    <form name="faxForm">
+      <field property="txtFaxNumber" depends="required">
+        <arg0 key="lbl.FaxNumber">
+        </arg0>
+      </field>
+    </form>
+    <form name="docUploadForm">
+      <field property="txtDestinationFolderPath" depends="required">
+        <arg0 key="lbl.DestinationFolder">
+        </arg0>
+      </field>
+    </form>
+  </formset>
+</form-validation>
+

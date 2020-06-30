@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FOLDER PATH="/" NAME="ROOT" ID="-1">
+	<FOLDER PATH="/home/DEMOUSER" NAME="DEMOUSER" ID="1234567811">
+	        <FOLDER PATH="/home/DEMOUSER/mail" NAME="mail" ID="1234567812">
+		    <FOLDER PATH="/home/DEMOUSER/mail/inbox" NAME="inbox" ID="1234567813"></FOLDER>
+                </FOLDER>
+                <FOLDER PATH="/home/DEMOUSER/test" NAME="test" ID="1234567814">
+		    <FOLDER PATH="/home/DEMOUSER/test/vinayak" NAME="vinayak" ID="1234567815" ></FOLDER>
+		</FOLDER>
+		<FOLDER PATH="/home/DEMOUSER/test11" NAME="test11" ID="1234567816" ></FOLDER>
+	</FOLDER>
+</FOLDER>

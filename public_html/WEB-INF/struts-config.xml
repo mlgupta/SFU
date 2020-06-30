@@ -1,0 +1,366 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  
+  <form-beans>
+    <form-bean name="loginForm" type="sfu.actionforms.login.LoginForm"/>
+    <form-bean name="userForm" type="sfu.actionforms.user.UserForm"/>
+    <form-bean name="viewLogForm" type="sfu.actionforms.logger.ViewLogForm"/>
+    <form-bean name="jobContentForm" type="sfu.actionforms.job.JobContentForm"/>
+    <form-bean name="patchHistoryForm" type="sfu.actionforms.patch.PatchHistoryForm"/>
+    <form-bean name="jobCreateForm" type="sfu.actionforms.job.JobCreateForm"/>
+    <form-bean name="jobConfigurationForm" type="sfu.actionforms.configuration.JobConfigurationForm"/>
+    <form-bean name="loggerConfigurationForm" type="sfu.actionforms.configuration.LoggerConfigurationForm"/>
+    <form-bean name="replicationConfigurationForm" type="sfu.actionforms.configuration.ReplicationConfigurationForm"/>
+    <form-bean name="scannerConfigurationForm" type="sfu.actionforms.configuration.ScannerConfigurationForm"/>
+    <form-bean name="faxServerConfigurationForm" type="sfu.actionforms.configuration.FaxServerConfigurationForm"/>
+    <form-bean name="smtpConfigurationForm" type="sfu.actionforms.configuration.SmtpConfigurationForm"/>
+    <form-bean name="patchConfigurationForm" type="sfu.actionforms.configuration.PatchConfigurationForm"/>
+    <form-bean name="repositoryConfigurationForm" type="sfu.actionforms.configuration.RepositoryConfigurationForm"/>
+    <form-bean name="configurationMainForm" type="sfu.actionforms.configuration.ConfigurationMainForm"/>
+    <form-bean name="userListForm" type="sfu.actionforms.user.UserListForm"/>
+    <form-bean name="userListSelectForm" type="sfu.actionforms.user.UserListSelectForm"/>
+    <form-bean name="auditTrailListForm" type="sfu.actionforms.auditTrail.AuditTrailListForm"/>
+    <form-bean name="docUploadForm" type="sfu.actionforms.upload.DocUploadForm"/>
+    <form-bean name="patchListForm" type="sfu.actionforms.patch.PatchListForm"/>
+    <form-bean name="rescheduleForm" type="sfu.actionforms.job.RescheduleForm"/>
+    <form-bean name="jobListForm" type="sfu.actionforms.job.JobListForm"/>
+    <form-bean name="availablePatchesForm" type="sfu.actionforms.patch.AvailablePatchesForm"/>
+    <form-bean name="mailForm" type="sfu.actionforms.job.mail.MailForm"/>
+    <form-bean name="faxForm" type="sfu.actionforms.job.fax.FaxForm"/>   
+    <form-bean name="folderDocSelectForm" type="sfu.actionforms.upload.FolderDocSelectForm"/>
+  </form-beans>  
+
+                         <!-- ========== Global Forward Definitions ============================== -->
+  <global-forwards>
+    <forward name="userList" path="/userListAction.do"/>
+    <forward name="jobList" path="/jobListAction.do"/>
+    <forward name="jobListUser" path="/jobListUserAction.do"/>
+    <forward name="userCreate" path="/userCreate.jsp"/>
+    <forward name="jobCreateB4" path="/jobCreateB4Action.do"/>
+    <forward name="userModify" path="/userModify.jsp"/>
+    <forward name="mail" path="/mailAction.do"/>
+    <forward name="mailB4" path="/mailB4Action.do"/>
+    <forward name="login" path="/loginB4Action.do"/>
+  </global-forwards>
+
+  <action-mappings>
+ 
+                          <!-- LoginB4Action Action -->
+    <action path="/loginB4Action" type="sfu.actions.login.LoginB4Action" validate="false" name="loginForm" unknown="false" scope="request">
+      <forward name="success" path="/login.jsp"/>
+    </action>
+    
+                          <!-- Login Action -->
+    <action path="/loginAction" type="sfu.actions.login.LoginAction" validate="false" name="loginForm" input="login" unknown="false" scope="request">
+      <forward name="admin" path="/configurationMainAction.do"/>
+      <forward name="general" path="/jobCreateB4Action.do"/>
+    </action>
+    
+                          <!-- LoginOut Action -->
+    <action path="/logoutAction" scope="request" type="sfu.actions.login.LogoutAction">
+      <forward name="success" path="/login.jsp"/> 
+    </action>
+    
+                          <!-- ConfigurationMain Action -->
+    <action path="/configurationMainAction" type="sfu.actions.configuration.ConfigurationMainAction" name="configurationMainForm" unknown="false">
+      <forward name="success" path="/configurationMain.jsp"/>
+    </action>
+    
+                          <!-- ReplicationConfigurationB4 Action -->
+    <action path="/replicationConfigurationB4Action" type="sfu.actions.configuration.ReplicationConfigurationB4Action" name="replicationConfigurationForm" unknown="false">
+      <forward name="success" path="/replicationConfiguration.jsp"/>
+    </action>
+        
+                          <!-- ReplicationConfiguration Action -->
+    <action path="/replicationConfigurationAction" type="sfu.actions.configuration.ReplicationConfigurationAction"  unknown="false">
+      <forward name="success" path="/replicationConfigurationB4Action.do"/>
+    </action>
+        
+                          <!-- RepositoryConfigurationB4 Action -->
+    <action path="/repositoryConfigurationB4Action" type="sfu.actions.configuration.RepositoryConfigurationB4Action" name="repositoryConfigurationForm" unknown="false">
+      <forward name="success" path="/repositoryConfiguration.jsp"/>
+    </action>
+        
+                          <!-- RepositoryConfiguration Action -->
+    <action path="/repositoryConfigurationAction" type="sfu.actions.configuration.RepositoryConfigurationAction"  unknown="false">
+      <forward name="success" path="/repositoryConfigurationB4Action.do"/>
+    </action>
+        
+                          <!-- ScannerConfigurationB4 Action -->
+    <action path="/scannerConfigurationB4Action" type="sfu.actions.configuration.ScannerConfigurationB4Action" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerConfiguration.jsp"/>
+    </action>
+        
+                          <!-- ScannerConfiguration Action -->
+    <action path="/scannerConfigurationAction" type="sfu.actions.configuration.ScannerConfigurationAction" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerConfigurationB4Action.do"/>
+    </action>
+
+                          <!-- ScannerSpecificConfiguration Action -->
+    <action path="/scannerSpecificConfigurationAction" type="sfu.actions.configuration.ScannerSpecificConfigurationAction" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerConfigurationB4Action.do"/>
+    </action>
+
+                          <!-- ScannerOptionAddB4 Action 
+    <action path="/scannerOptionAddB4Action" type="sfu.actions.configuration.ScannerOptionAddB4Action" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerOptionAdd.jsp"/>
+    </action>
+    -->
+
+                          <!-- ScannerOptionAdd Action 
+    <action path="/scannerOptionAddAction" type="sfu.actions.configuration.ScannerOptionAddAction" name="scannerConfigurationForm" unknown="false" scope="request">
+    <forward name="success" path="/scannerConfigurationB4Action.do"/>
+    </action>
+    -->
+
+                          <!-- ScannerOptionEditB4 
+    <action path="/scannerOptionEditB4Action" type="sfu.actions.configuration.ScannerOptionEditB4Action" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerOptionEdit.jsp"/>
+    </action>
+    Action 
+    -->
+
+                          <!-- ScannerOptionEdit Action 
+    <action path="/scannerOptionEditAction" type="sfu.actions.configuration.ScannerOptionEditAction" name="scannerConfigurationForm" unknown="false" scope="request">
+      <forward name="success" path="/scannerConfigurationB4Action.do"/>
+    </action>
+    -->
+        
+                          <!-- SmtpConfigurationB4 Action -->
+    <action path="/smtpConfigurationB4Action" type="sfu.actions.configuration.SmtpConfigurationB4Action" name="smtpConfigurationForm" unknown="false">
+      <forward name="success" path="/smtpConfiguration.jsp"/>
+    </action>
+        
+                          <!-- SmtpConfiguration Action -->
+    <action path="/smtpConfigurationAction" type="sfu.actions.configuration.SmtpConfigurationAction"  >
+      <forward name="success" path="/smtpConfigurationB4Action.do"/>
+    </action>
+        
+                          <!-- FaxServerConfigurationB4 Action-->
+    <action path="/faxServerConfigurationB4Action" type="sfu.actions.configuration.FaxServerConfigurationB4Action" name="faxServerConfigurationForm" unknown="false">
+      <forward name="success" path="/faxServerConfiguration.jsp"/>
+    </action>
+    
+                          <!-- FaxServerConfiguration Action -->
+    <action path="/faxServerConfigurationAction" type="sfu.actions.configuration.FaxServerConfigurationAction" unknown="false">
+      <forward name="success" path="/faxServerConfigurationB4Action.do"/>
+    </action>
+
+                          <!-- JobConfigurationB4 Action -->
+    <action path="/jobConfigurationB4Action" type="sfu.actions.configuration.JobConfigurationB4Action" name="jobConfigurationForm" unknown="false">
+      <forward name="success" path="/jobConfiguration.jsp"/>
+    </action>
+
+                          <!-- JobConfiguration Action -->
+    <action path="/jobConfigurationAction" type="sfu.actions.configuration.JobConfigurationAction" unknown="false">
+      <forward name="success" path="/jobConfigurationB4Action.do"/>
+    </action>
+
+                          <!-- UserListSelect Action -->
+    <action path="/userListSelectAction" type="sfu.actions.user.UserListSelectAction" name="userListSelectForm" unknown="false" scope="request">
+      <forward name="success" path="/userListSelect.jsp"/>
+    </action>
+        
+                          <!-- UserList Action -->
+    <action path="/userListAction" type="sfu.actions.user.UserListAction" name="userListForm" unknown="false" scope="request">
+      <forward name="success" path="/userList.jsp"/>
+    </action>
+        
+                          <!-- UserCreateB4 Action -->
+    <action name="userForm" path="/userCreateB4Action" type="sfu.actions.user.UserCreateB4Action" validate="false" input="userList" scope="request">
+      <forward name="success" path="/userCreate.jsp"/>
+    </action>
+        
+                          <!-- UserCreate Action -->
+    <action name="userForm" path="/userCreateAction" type="sfu.actions.user.UserCreateAction" input="userCreate" scope="request">
+      <forward name="success" path="/userListAction.do"/>
+    </action>
+        
+                          <!-- UserModifyB4 Action -->
+    <action path="/userModifyB4Action" type="sfu.actions.user.UserModifyB4Action" validate="false" name="userForm" unknown="false" scope="request">
+      <forward name="success" path="/userModify.jsp"/>
+    </action>
+        
+                          <!-- UserModify Action -->
+    <action path="/userModifyAction" type="sfu.actions.user.UserModifyAction" name="userForm" unknown="false" scope="request">
+      <forward name="success" path="/userListAction.do"/>
+    </action>
+        
+                          <!-- UserDelete Action -->
+    <action path="/userDeleteAction" type="sfu.actions.user.UserDeleteAction" scope="request">
+      <forward name="success" path="/userListAction.do"/>
+    </action>
+        
+                          <!-- JobList Action -->
+    <action path="/jobListAction" type="sfu.actions.job.JobListAction" name="jobListForm" unknown="false">
+      <forward name="success" path="/jobList.jsp"/>
+    </action>
+
+                          <!-- JobListUser Action -->
+    <action path="/jobListUserAction" type="sfu.actions.job.JobListAction" name="jobListForm" unknown="false">
+      <forward name="success" path="/jobListUser.jsp"/>
+    </action>
+        
+                          <!-- JobRescheduleB4 Action -->
+    <action path="/jobRescheduleB4Action" type="sfu.actions.job.JobRescheduleB4Action" input="jobList" name="rescheduleForm" unknown="false" scope="request">
+      <forward name="success" path="/rescheduleJob.jsp"/>
+    </action>
+        
+                          <!-- JobReschedule Action -->
+    <action path="/jobRescheduleAction" type="sfu.actions.job.JobRescheduleAction" name="rescheduleForm" unknown="false" scope="request">
+      <forward name="success" path="/jobListAction.do"/>
+    </action>
+
+                          <!-- JobDelete Action -->
+    <action path="/jobDeleteAction" type="sfu.actions.job.JobDeleteAction"  unknown="false" name="jobListForm" scope="request">
+      <forward name="success" path="/jobListAction.do"/>
+    </action>
+        
+                          <!-- SchedulerStartStop Action -->
+    <action path="/schedulerStartStopAction" type="sfu.actions.job.SchedulerStartStopAction"  name="jobListForm" unknown="false" scope="request">
+      <forward name="success" path="/jobListAction.do"/>
+    </action>
+
+                          <!-- JobRescheduleUserB4 Action -->
+    <action path="/jobRescheduleUserB4Action" type="sfu.actions.job.JobRescheduleB4Action" input="jobListUser" name="rescheduleForm" unknown="false" scope="request">
+      <forward name="success" path="/rescheduleJobUser.jsp"/>
+    </action>
+
+                          <!-- JobRescheduleUser Action -->
+    <action path="/jobRescheduleUserAction" type="sfu.actions.job.JobRescheduleAction" name="rescheduleForm" unknown="false" scope="request">
+      <forward name="success" path="/jobListUserAction.do"/>
+    </action>
+
+                          <!-- JobDeleteUser Action -->
+    <action path="/jobDeleteUserAction" type="sfu.actions.job.JobDeleteAction"  unknown="false" name="jobListForm" scope="request">
+      <forward name="success" path="/jobListUserAction.do"/>
+    </action>
+        
+                          <!-- JobRelay Action -->
+    <action path="/jobRelayAction"  type="sfu.actions.job.JobRelayAction" unknown="false" scope="request">
+      <forward name="job_reschedule" path="/jobRescheduleB4Action.do"/>
+      <forward name="job_reschedule_user" path="/jobRescheduleUserB4Action.do"/>
+      <forward name="job_delete" path="/jobDeleteAction.do"/>
+      <forward name="job_delete_user" path="/jobDeleteUserAction.do"/>
+      <forward name="scheduler_start_stop" path="/schedulerStartStopAction.do"/>      
+      <forward name="search_scheduler" path="/jobListAction.do"/>     
+      <forward name="search_scheduler_user" path="/jobListUserAction.do"/>     
+      <forward name="page_scheduler" path="/jobListAction.do"/>      
+      <forward name="page_scheduler_user" path="/jobListUserAction.do"/>      
+    </action>
+
+                          <!-- PatchList Action -->
+    <action path="/patchListAction" type="sfu.actions.patch.PatchListAction" name="patchListForm" unknown="false">
+      <forward name="success" path="/patchList.jsp"/>
+    </action>
+    
+                          <!-- AvailablePatches Action -->
+    <action path="/availablePatchesAction" type="sfu.actions.patch.AvailablePatchesAction" name="availablePatchesForm" unknown="false">
+      <forward name="success" path="/availablePatches.jsp"/>
+    </action>
+    
+                          <!-- PatchConfigurationB4 Action -->
+    <action path="/patchConfigurationB4Action" type="sfu.actions.configuration.PatchConfigurationB4Action" name="patchConfigurationForm" unknown="false">
+      <forward name="success" path="/patchConfiguration.jsp"/>
+    </action>
+
+                          <!-- PatchConfiguration Action -->
+    <action path="/patchConfigurationAction" type="sfu.actions.configuration.PatchConfigurationAction"  unknown="false">
+      <forward name="success" path="/patchConfigurationB4Action.do"/>
+    </action>
+        
+                          <!-- PatchHistory Action -->
+    <action path="/patchHistoryAction" type="sfu.actions.patch.PatchHistoryAction" name="patchHistoryForm" unknown="false">
+      <forward name="success" path="/patchHistory.jsp"/>
+    </action>
+        
+                          <!-- LoggerConfigurationB4 Action -->
+    <action path="/loggerConfigurationB4Action" type="sfu.actions.configuration.LoggerConfigurationB4Action" name="loggerConfigurationForm" unknown="false">
+      <forward name="success" path="/loggerConfiguration.jsp"/>
+    </action>
+        
+                          <!-- LoggerConfiguration Action -->
+    <action path="/loggerConfigurationAction" type="sfu.actions.configuration.LoggerConfigurationAction"  unknown="false">
+      <forward name="success" path="/loggerConfigurationB4Action.do"/>
+    </action>
+
+                          <!-- AuditTrailList Action -->
+    <action path="/auditTrailListAction" type="sfu.actions.auditTrail.AuditTrailListAction" name="auditTrailListForm" unknown="false" scope="request">
+      <forward name="success" path="/audit.jsp"/>
+    </action>
+    
+                          <!-- AuditTrailDelete Action -->
+    <action path="/auditTrailDeleteAction" type="sfu.actions.auditTrail.AuditTrailDeleteAction" name="auditTrailListForm" scope="request">
+      <forward name="success" path="/auditTrailListAction.do"/>
+    </action>
+    
+                          <!-- ViewLog Action -->
+    <action path="/viewLogAction" type="sfu.actions.logger.ViewLogAction" name="viewLogForm" unknown="false">
+      <forward name="success" path="/viewLog.jsp"/>
+    </action>
+        
+                          <!-- JobCreateB4 Action -->
+    <action path="/jobCreateB4Action" type="sfu.actions.job.JobCreateB4Action" name="jobCreateForm" validate="false" unknown="false" scope="request">
+      <forward name="success" path="/jobCreate.jsp"/>
+    </action>
+        
+                          <!-- JobCreate Action -->
+    <action path="/jobCreateAction" type="sfu.actions.job.JobCreateAction" name="jobCreateForm" input="jobCreateB4" unknown="false" scope="request">
+      <forward name="success" path="/jobCreateB4Action.do"/>
+    </action>
+        
+                          <!-- UploadB4 Action 
+    <action path="/uploadB4Action" type="sfu.actions.job.upload.UploadB4Action" name="docUploadForm" validate="false" unknown="false" scope="request">
+      <forward name="success" path="/docUpload.jsp"/>
+    </action>
+        -->
+                          <!-- Upload Action 
+    <action path="/uploadAction" type="sfu.actions.job.upload.UploadAction" name="docUploadForm" unknown="false" scope="request">
+      <forward name="success" path="/docUpload.jsp"/>
+    </action>
+        -->
+                          <!-- MailB4 Action 
+    <action path="/mailB4Action" type="sfu.actions.job.mail.MailB4Action" validate="false" unknown="false" name="mailForm" scope="request">
+      <forward name="success" path="/mail.jsp"/>
+    </action>
+        -->
+                          <!-- Mail Action 
+    <action path="/mailAction" type="sfu.actions.job.mail.MailAction" unknown="true" name="mailForm">
+      <forward name="success" path="/mail.jsp"/>
+    </action>
+        -->
+                          <!-- FaxB4 Action 
+    <action name="faxForm" path="/faxB4Action" type="sfu.actions.job.fax.FaxB4Action" validate="false" unknown="false"  scope="request">
+      <forward name="success" path="/fax.jsp"/>
+    </action>
+        -->
+                          <!-- Fax Action 
+    <action path="/faxAction" type="sfu.actions.job.fax.FaxAction"  unknown="false" name="faxForm">
+      <forward name="success" path="/fax.jsp"/>
+    </action>
+        -->
+                          <!-- FolderDocSelectB4 Action -->
+    <action path="/folderDocSelectB4Action" name="folderDocSelectForm" scope="request" type="sfu.actions.upload.FolderDocSelectB4Action" unknown="false">
+      <forward name="success" path="/folder_doc_select.jsp"/>
+    </action>
+        
+                          <!-- ListProcessStatus Action -->
+    <action path="/listProcessStatusAction" type="sfu.actions.job.ListProcessStatusAction" unknown="false" >
+      <forward name="success" path="/listProcessStatus.jsp"/>
+    </action>
+      
+  </action-mappings>
+
+  <controller>
+                          <!-- The "input" parameter on "action" elements is the name of a
+         local or global "forward" rather than a module-relative path -->
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  <message-resources parameter="sfu.ApplicationResources" null="false" />
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+ 
+</struts-config>

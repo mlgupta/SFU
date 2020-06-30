@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxta-config>
+	<jxta-server peerid="urn:jxta:uuid-1177772E64624365AE74B2792E636F6D7777772E64624365AE74F2792E636F6D03" />
+	<jxta-group-property
+		group_login="SecurePeerGroups" 
+		group_password="RULE" 
+		group_name="FileSyncGroup" 
+		group_id="urn:jxta:uuid-1177772E64624365AE74B2792E636F6D02"
+		module_specs_id="urn:jxta:uuid-11D66292824C44249CA9E2D9951085559F2CC16F11A747C7899A97649AFF0C5A06"
+	/>
+	<jxta-rdv-relay-addr>
+		<rdv-relay addr="http://192.168.0.12:9700" />
+		<rdv-relay addr="tcp://192.168.0.12:9701" />
+	</jxta-rdv-relay-addr>
+</jxta-config>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Commands>
+  <UserCommands>
+    <CreateCommand>useradd</CreateCommand>
+    <ModifyCommand>usermod</ModifyCommand>
+    <DeleteCommand>userdel</DeleteCommand>
+    <CryptCommand>openssl</CryptCommand>
+    <CryptParam>passwd</CryptParam>
+    <CommentParam>-c</CommentParam>
+    <PasswordParam>-p</PasswordParam>
+    <PasswordFile>/etc/passwd</PasswordFile>
+    <ShadowFile>/etc/shadow</ShadowFile>
+    <StartUIDForUser>500</StartUIDForUser>
+    <EndUIDForUser>60000</EndUIDForUser>
+  </UserCommands>
+</Commands>

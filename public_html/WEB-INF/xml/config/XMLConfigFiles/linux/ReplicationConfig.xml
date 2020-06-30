@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+  <Replication>
+   <ReplicationInterval>20</ReplicationInterval>
+   <IntervalUnit>minute</IntervalUnit>
+   <ParentFolder>/home/system</ParentFolder>
+   <Timeout></Timeout>
+ </Replication>
+</Configuration>
+

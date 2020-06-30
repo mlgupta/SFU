@@ -1,0 +1,22 @@
+#############################################################################
+#                       Confidentiality Information                         #
+#                                                                           #
+# This module is the confidential and proprietary information of            #
+# DBSentry Corp.; it is not to be copied, reproduced, or transmitted in any #
+# form, by any means, in whole or in part, nor is it to be used for any     #
+# purpose other than that for which it is expressly provided without the    #
+# written permission of DBSentry Corp.                                      #
+#                                                                           #
+# Copyright (c) 2004-2005 DBSentry Corp.  All Rights Reserved.              #
+#                                                                           #
+#############################################################################
+# $Id: log4j.properties.bak1,v 1.1.1.1 2006/02/14 07:58:23 ias Exp $
+#############################################################################
+log4j.logger.SfuLogger=debug,R
+
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+log4j.appender.R.File=../log/sfu.log
+log4j.appender.R.MaxFileSize=1MB
+log4j.appender.R.MaxBackupIndex=2
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d{MMM dd HH:mm:ss} [%p] - %m%n

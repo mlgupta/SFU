@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+    <Job>
+     <MaxUploadSize></MaxUploadSize>
+     <UploadSizeUnit></UploadSizeUnit>
+     <MaxMailSize></MaxMailSize>
+     <MailSizeUnit></MailSizeUnit>
+     <MaxFaxSize></MaxFaxSize>
+     <FaxSizeUnit></FaxSizeUnit>
+     <MaxPagesToFax></MaxPagesToFax>
+     <MaxNumberOfRetries></MaxNumberOfRetries>
+     <RetrialInterval>1</RetrialInterval>
+   </Job>
+</Configuration>
+

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+  <Patch>
+  <LocalPatchFolder>/home/patches</LocalPatchFolder>
+   <RemotePatchFolder>/remote/patches</RemotePatchFolder>
+   <PatchCheckInterval>40</PatchCheckInterval>
+   <IntervalUnit>day</IntervalUnit>
+ </Patch>
+</Configuration>
+
